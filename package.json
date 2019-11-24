@@ -1,0 +1,78 @@
+{
+  "name": "node-express-sequalize-starter",
+  "version": "2.0.0",
+  "description": "Starter project for node js which uses express and sequalize orm for database management.",
+  "author": "Brijesh Bhakta <brijeshbhakta30@gmail.com>",
+  "main": "server/index.js",
+  "private": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.9.3",
+    "npm": ">=5.5.1"
+  },
+  "scripts": {
+    "start": "node server",
+    "start:debug": "cross-env DEBUG=node-server:* npm start",
+    "lint": "esw *.js server config --color",
+    "lint:watch": "yarn lint -- --watch",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "prestart": "yarn db:migrate",
+    "db:migrate": "sequelize db:migrate",
+    "migration:create": "sequelize migration:create --name"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brijeshbhakta30/node-express-sequelize-starter.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "node.js",
+    "MySQL",
+    "Sequelize",
+    "starter",
+    "starter code",
+    "es6",
+    "es7",
+    "mocha",
+    "REST",
+    "API",
+    "REST API",
+    "boilerplate"
+  ],
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "3.5.1",
+    "body-parser": "1.18.3",
+    "compression": "1.7.2",
+    "cookie-parser": "1.4.3",
+    "cors": "2.8.4",
+    "crypto": "1.0.1",
+    "cryptr": "4.0.2",
+    "debug": "3.1.0",
+    "dotenv": "6.0.0",
+    "express": "4.16.3",
+    "express-jwt": "5.3.1",
+    "express-validation": "1.0.2",
+    "helmet": "3.12.1",
+    "http-status": "1.1.2",
+    "joi": "13.3.0",
+    "jsonwebtoken": "8.2.2",
+    "lodash": "4.17.10",
+    "method-override": "2.3.10",
+    "morgan": "1.9.0",
+    "mysql2": "1.5.3",
+    "nodemailer": "4.7.0",
+    "sequelize": "4.37.10"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "7.0.0",
+    "@commitlint/config-conventional": "7.0.1",
+    "cross-env": "5.1.6",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-watch": "3.1.5",
+    "sequelize-cli": "4.0.0"
+  }
+}
